@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+.header {
+    background: #000814;
+    padding-inline: 16px;
+}
+
+.nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    color: white;
+    list-style: none;
+}
+
+.nav-list a {
+    font-size: 18px;
+    color: #fff;
+    padding-block: 16px;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+}
+
+@media (max-width: 750px) {
+    .hamburger {
+        display: block;
+        z-index: 1;
+    }
+    
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000814;
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    .nome {
+        font-size: 1em;
+    }
+
+    /* Eventos */
+
+    .nav.active .nav-list {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+}
+
+
+.imagem {
+    width: 38px;
+}
+
+body {
+    background-color: #001d3d;
+}
+
+main {
+    color:  white;
+    width: 100%;
+    height: 1080px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone {
+    width: 10%;
+}
+
+.fotoDePerfil {
+    width: 40%;
+    height: 40%;
+    border-radius: 80%;
+    border: 5px solid #ffc300;
+
+}
+
+.TextArea {
+    display: block;
+    width: 100%;
+    height: 50%;
+    padding: 170px 0 0 0;
+    text-align: center;
+    background: url(img/City.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.nome {
+    margin: 80px 0 0 0 ;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+    font-size: 4em;
+    font-weight: 900;
+    line-height: 1;
+    cursor: pointer;
+}
+.descriçãoPerfil {
+    width: 50%;
+    margin: auto;
+    padding: 1%;
+    text-shadow: 0px 0px 1px #000814;
+}
+
+.botãoVejaMais {
+    width: 8vw;
+    height: 5vh;
+    border-radius: 4px;
+    color: white;
+    background-color: #ffd000;
+    border: none;
+    margin: auto;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.botãoVejaMais:hover {
+    border: solid #302f001f;
+    transition: 1ms ease-in;
+}
+
+
